@@ -1,0 +1,18 @@
+<div *ngIf="currentUser$ | async as user">
+  <h3>{{ user.username }}</h3>
+  <span>It's you</span>
+</div>
+<div>
+  <p-button
+    routerLink="/profile"
+    [text]="true"
+    icon="pi pi-cog"
+    outlined="true"
+  />
+  <p-button
+    (click)="logout()"
+    [text]="true"
+    icon="pi pi-sign-out"
+    outlined="true"
+  />
+</div>

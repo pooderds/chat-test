@@ -1,0 +1,11 @@
+<form
+  [formGroup]="messageForm"
+  (submit)="onSubmit()"
+  #form="ngForm"
+  class="flex gap-2 justify-content-between"
+>
+  <div class="card flex justify-content-center w-full">
+    <input class="w-full" type="text" pInputText formControlName="content" />
+  </div>
+  <p-button [disabled]="form.invalid" type="submit" icon="pi pi-arrow-right" />
+</form>

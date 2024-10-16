@@ -1,0 +1,8 @@
+@if (activeChannelMessages$ | async; as messages) {
+  @for (item of messages; track item.id; let i = $index) {
+    <app-message-item
+      [name]="appendMessage(messages, i, item.from_user) | async"
+      [content]="item.content"
+    />
+  }
+}

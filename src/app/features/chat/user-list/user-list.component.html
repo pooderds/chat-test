@@ -1,0 +1,43 @@
+<div *ngIf="selectedChannel$ | async">
+  <div
+    class="card flex justify-content-center flex-column gap-2"
+    *ngIf="usersInChannel$ | async as users; else addUsers"
+  >
+    <h3>Users</h3>
+    <p-listbox
+      [options]="users"
+      optionLabel="name"
+      [style]="{ width: '20rem' }"
+      [listStyle]="{ 'max-height': '220px' }"
+    >
+      <ng-template let-user pTemplate="item">
+        <div class="flex align-items-center gap-2">
+          <i
+            class="pi pi-circle-on"
+            [ngClass]="user.is_online ? 'text-green-400' : 'text-red-400'"
+          ></i>
+          <div>{{ user.username }}</div>
+        </div>
+      </ng-template>
+    </p-listbox>
+
+    <form
+      [formGroup]="formGroup"
+      (submit)="inviteUserToChannel()"
+      class="flex justify-content-between"
+    >
+      <p-dropdown
+        [options]="(usersToInvite$ | async) ?? []"
+        formControlName="selectedUserName"
+        optionLabel="username"
+        placeholder="Select a user"
+        (onChange)="saveSelectedUser($event)"
+      />
+      <button type="submit" pButton label="Add user"></button>
+    </form>
+  </div>
+</div>
+
+<ng-template #addUsers>
+  <p>Add User to Chat</p>
+</ng-template>

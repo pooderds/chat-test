@@ -1,0 +1,79 @@
+{
+  "users": [
+    {
+      "id": "111",
+      "username": "Maria",
+      "password": "pppppp",
+      "is_online": true
+    },
+    {
+      "id": "222",
+      "username": "Max",
+      "password": "pppppp",
+      "is_online": false
+    },
+    {
+      "id": "333",
+      "username": "Andrew",
+      "password": "password",
+      "is_online": false
+    }
+  ],
+  "messages": [
+    {
+      "id": "111",
+      "from_user": "111",
+      "channel_id": "part",
+      "content": "Hello"
+    },
+    {
+      "id": "222",
+      "from_user": "333",
+      "channel_id": "part",
+      "content": "Hi!"
+    },
+    {
+      "id": "123",
+      "from_user": "222",
+      "channel_id": "gen",
+      "content": "Hey!"
+    },
+    {
+      "id": "124",
+      "from_user": "111",
+      "channel_id": "gen",
+      "content": "How r u?"
+    }
+  ],
+  "channels": [
+    {
+      "id": "part",
+      "name": "party"
+    },
+    {
+      "id": "sum",
+      "name": "summer"
+    },
+    {
+      "id": "gen",
+      "name": "general"
+    }
+  ],
+  "user_channels": [
+    {
+      "user_id": "222",
+      "channel_id": "sum",
+      "id": "34db"
+    },
+    {
+      "user_id": "111",
+      "channel_id": "gen",
+      "id": "e786"
+    },
+    {
+      "user_id": "333",
+      "channel_id": "part",
+      "id": "fd8e"
+    }
+  ]
+}

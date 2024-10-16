@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeflex/primeflex.css";
+@import "primeicons/primeicons.css";
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100vh;
+    background: #f4f7f6;
+  }
+  
+  
+
+/* Order */
+@layer reset, primeng;
+
+/* Reset CSS */
+@layer reset {
+    *{
+        margin: 0
+    }
+    button,
+    input {
+       
+    }
+    
+}
+
+

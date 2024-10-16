@@ -1,0 +1,37 @@
+<div
+  *ngIf="channels$ | async as channels; else unavailable"
+  class="card flex justify-content-center flex-column gap-2"
+>
+  <h3>Channels</h3>
+  <p-listbox
+    [options]="channels"
+    optionLabel="name"
+    [style]="{ width: '20rem' }"
+    [listStyle]="{ 'max-height': '150px' }"
+    (onClick)="onSelected($event)"
+  >
+    <ng-template let-channel pTemplate="item">
+      <div class="flex align-items-center gap-2">
+        <div
+          [ngClass]="{ active: channel.id === (selectedChannelId$ | async) }"
+        >
+          {{ channel.name | addHash }}
+        </div>
+      </div>
+    </ng-template>
+  </p-listbox>
+
+  <form
+    [formGroup]="formGroup"
+    (submit)="onCreate()"
+    #form='ngForm'
+    class="flex flex-column gap-2"
+  >
+    <input type="text" pInputText formControlName="channelName" />
+    <button [disabled]="form.invalid" type="submit" pButton label="Add Channel"></button>
+  </form>
+</div>
+
+<ng-template #unavailable>
+  <div>Chats are unavailable</div>
+</ng-template>

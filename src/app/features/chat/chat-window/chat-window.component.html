@@ -1,0 +1,7 @@
+<div *ngIf="selectedChannel$ | async as channel; else selectChannel"
+class="flex flex-column gap-2">
+    <h4>{{channel.name | addHash}}</h4>
+    <app-message-list/>
+    <app-chat-input-control/>
+</div>
+<ng-template #selectChannel >Please select a channel</ng-template>

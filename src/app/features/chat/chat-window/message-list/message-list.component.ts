@@ -12,7 +12,6 @@ import { UserStateService } from '../../../../core/services/state/user-state/use
   imports: [MessageItemComponent, AsyncPipe],
   templateUrl: './message-list.component.html',
   styleUrl: './message-list.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MessageListComponent implements OnInit {
   private messageService = inject(MessageStateService);

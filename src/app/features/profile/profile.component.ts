@@ -10,7 +10,6 @@ import { RouterLink } from '@angular/router';
   imports: [ButtonModule, AsyncPipe, NgIf, RouterLink],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProfileComponent {
   private authService = inject(AuthService);

@@ -36,7 +36,6 @@ import {NotificationMessageSeverity, NotificationMessageTitle} from "../../../sh
   ],
   templateUrl: './channel-list.component.html',
   styleUrl: './channel-list.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ChannelListComponent implements OnInit {
   formGroup: FormGroup = new FormGroup({});

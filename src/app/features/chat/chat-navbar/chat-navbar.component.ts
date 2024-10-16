@@ -10,7 +10,6 @@ import { AsyncPipe, NgIf } from '@angular/common';
   imports: [ButtonModule, RouterLink, AsyncPipe, NgIf],
   templateUrl: './chat-navbar.component.html',
   styleUrl: './chat-navbar.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChatNavbarComponent {
 

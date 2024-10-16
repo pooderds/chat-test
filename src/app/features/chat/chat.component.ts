@@ -19,6 +19,5 @@ import { AsyncPipe } from '@angular/common';
   ],
   templateUrl: './chat.component.html',
   styleUrl: './chat.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChatComponent {}

@@ -18,7 +18,6 @@ import { ToastModule } from 'primeng/toast';
   imports: [RouterOutlet, ButtonModule, HttpClientModule, ToastModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent implements OnInit {
   title = 'chat';

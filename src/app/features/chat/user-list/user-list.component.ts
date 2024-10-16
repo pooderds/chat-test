@@ -47,7 +47,6 @@ import {
   ],
   templateUrl: './user-list.component.html',
   styleUrl: './user-list.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UserListComponent implements OnInit {
   formGroup: FormGroup = new FormGroup({});

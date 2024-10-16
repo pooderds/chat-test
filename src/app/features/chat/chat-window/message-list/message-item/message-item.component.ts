@@ -6,7 +6,6 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   imports: [],
   templateUrl: './message-item.component.html',
   styleUrl: './message-item.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MessageItemComponent {
  @Input() name: string | undefined | null;

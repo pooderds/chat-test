@@ -37,7 +37,6 @@ import {
   ],
   templateUrl: './sign-in.component.html',
   styleUrl: './sign-in.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SignInComponent implements OnInit {
   private messageService = inject(MessageService);

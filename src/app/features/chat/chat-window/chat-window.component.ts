@@ -17,7 +17,6 @@ import { AddHashPipe } from '../../../shared/pipes/add-hash/add-hash.pipe';
   ],
   templateUrl: './chat-window.component.html',
   styleUrl: './chat-window.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChatWindowComponent {
   private channelService = inject(ChannelStateService);

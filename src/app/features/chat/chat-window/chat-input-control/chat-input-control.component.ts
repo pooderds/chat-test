@@ -19,7 +19,6 @@ import { v4 } from 'uuid';
   imports: [InputTextModule, ButtonModule, ReactiveFormsModule],
   templateUrl: './chat-input-control.component.html',
   styleUrl: './chat-input-control.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChatInputControlComponent implements OnInit {
   private messageService = inject(MessageStateService);
